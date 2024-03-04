@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question and Answer Platform</title>
+    
+    <!-- Add favicon icon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Add CSS styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .feedback-container {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-content {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f3f3f3;
+            color: #333;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ANSWER_HEADING}}</h1>
+        <div>
+            <p>Original Sentence: {{ORIGINAL_SENTENCE}}</p>
+            <p>Good Translation: {{TARGET_SENTENCE}}</p>
+            <p>Your Answer: {{USER_ANSWER}}</p>
+        </div>
+        <div class="feedback-container">
+            <h2>Feedback</h2>
+            <div class="feedback-content" contenteditable="true" placeholder="Enter feedback details...">{{FEEDBACK_DETAILS}}</div>
+        </div>
+        <div class="button-container">
+            <a class="button" href="{{TRANSLATION_TASK_URL}}">Next question</a>
+        </div>
+    </div>
+</body>
+</html>
